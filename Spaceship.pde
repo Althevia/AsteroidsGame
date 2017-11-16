@@ -1,7 +1,9 @@
 class Spaceship extends Floater  
 {   
-  Spaceship()
+  private int hp;
+  public Spaceship()
   {
+    hp = 3;
     corners=3;  //the number of corners, a triangular floater has 3   
     xCorners= new int[corners];   
     yCorners= new int[corners]; 
@@ -47,5 +49,26 @@ class Spaceship extends Floater
   }  
   public double getPointDirection() {
     return myPointDirection;
+  }
+  //public void accelerate (double dAmount)   //attempting to limit acceleration
+  //{          
+  //  //convert the current direction the floater is pointing to radians    
+  //  double dRadians =myPointDirection*(Math.PI/180);     
+  //  //change coordinates of direction of travel
+  //  if (dAmount < 0)
+  //    if (myDirectionX>-5)
+  //        myDirectionX += ((dAmount) * Math.cos(dRadians)); 
+  //    if (myDirectionY>-5)
+  //        myDirectionY += ((dAmount) * Math.sin(dRadians));  
+  //  if (dAmount > 0)
+  //    if (myDirectionX<5)
+  //        myDirectionX += ((dAmount) * Math.cos(dRadians)); 
+  //    if (myDirectionY<5)
+  //        myDirectionY += ((dAmount) * Math.sin(dRadians));       
+  //}  
+  public void damage()
+  {
+    if (start == true)
+      hp = hp - 1;
   }
 }
