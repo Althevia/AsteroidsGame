@@ -71,4 +71,7 @@ class Spaceship extends Floater
     if (start == true)
       hp = hp - 1;
   }
+  public int gethp() {
+    return (int)hp;
+  }  
 }

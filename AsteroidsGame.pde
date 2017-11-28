@@ -3,6 +3,7 @@ ArrayList<Asteroid> meteor;
 Stars[] sky= new Stars[250];
 ArrayList <Bullet> pewpew;
 boolean start = false;
+boolean end = false;
 public void setup() 
 {
   size(800,800);
@@ -32,6 +33,10 @@ public void draw()
     {
       meteor.remove(i);
       i--;
+      ship.damage();
+      System.out.println(ship.gethp());
+      if (ship.gethp()<1)
+        end = true;
     }
   }
   for (int i=0; i<pewpew.size(); i++)
@@ -39,6 +44,8 @@ public void draw()
     pewpew.get(i).show();
     pewpew.get(i).move();
   }
+  if (end==true)
+    exit();
   
 }
 public void keyPressed()
