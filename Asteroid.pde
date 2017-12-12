@@ -10,7 +10,7 @@ class Asteroid extends Floater
     else {rotationSpeed = -((int)(Math.random()*2)+1);}
     x = (int)(Math.random()*800)-400;
     y = (int)(Math.random()*800)-400;
-    s = 1.25;
+    s = 1.5;
     corners=6;  //the number of corners, a triangular floater has 3   
     xCorners= new int[corners];   
     yCorners= new int[corners]; 

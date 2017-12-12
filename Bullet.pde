@@ -11,7 +11,7 @@ class Bullet extends Floater
     myDirectionY = 10*Math.sin(dRadians) + theShip.getDirectionY();
     myColor = 239;
   }
-    public void setX(int x) {
+  public void setX(int x) {
     myCenterX=x;
   }  
   public int getX() {
