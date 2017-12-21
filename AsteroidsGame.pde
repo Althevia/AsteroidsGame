@@ -48,7 +48,6 @@ public void draw()
         meteor.remove(i);
         i--;
         ship.damage();
-        System.out.println(ship.gethp());
         if (ship.gethp()<1)
           end = true;
       }
